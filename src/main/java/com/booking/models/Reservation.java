@@ -37,9 +37,9 @@ public class Reservation {
             totalBiaya += s.getPrice();
         }
         double diskon = 0;
-        if(customer.getMember().getMembershipName().equals("Silver")){
+        if(customer.getMember().getMembershipName().equalsIgnoreCase("Silver")){
             diskon = totalBiaya * 0.05;
-        } else if(customer.getMember().getMembershipName().equals("Gold")){
+        } else if(customer.getMember().getMembershipName().equalsIgnoreCase("Gold")){
             diskon = totalBiaya * 0.10;
         }
         totalBiaya -= diskon;

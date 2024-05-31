@@ -37,7 +37,7 @@ public class PrintService {
                 "No.", "ID", "Nama Customer", "Service", "Total Biaya", "Workstage");
         System.out.println("+========================================================================================+");
         for (Reservation reservation : reservationList) {
-            if(reservation.getWorkstage().equalsIgnoreCase("In Process") || reservation.getWorkstage().equalsIgnoreCase("In process")) {
+            if(reservation.getWorkstage().equalsIgnoreCase("In Process")) {
                 System.out.printf("| %-4s | %-8s | %-11s | %-15s | %-15s | %-15s |\n",
                 num, reservation.getReservationId(), reservation.getCustomer().getName(), printServices(reservation.getServices()), "Rp. " + reservation.getReservationPrice(), reservation.getWorkstage());
                 num++;
