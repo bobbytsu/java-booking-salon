@@ -10,7 +10,7 @@ import com.booking.models.Service;
 
 public class ReservationService {
 
-    static int lastReservationId = 0;
+    public static int lastReservationId = 0;
     public static void createReservation(Scanner input, List<Customer> customerList, List<Employee> employeeList, List<Service> serviceList, List<Reservation> reservationList) {
 
         PrintService.showAllCustomer(customerList);
@@ -50,7 +50,7 @@ public class ReservationService {
             } else {
                 if(service != null && !selectedServices.contains(service)) {
                     selectedServices.add(service);
-                    if (selectedServices.size() == serviceList.size()) {
+                    if(selectedServices.size() == serviceList.size()) {
                         break;
                     }
                     System.out.println("Ingin pilih service yang lain (Y/T)?");
